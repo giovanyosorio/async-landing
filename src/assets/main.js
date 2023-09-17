@@ -15,12 +15,13 @@ async function  fetchData(urlAPi){
     const data=await response.json()
     console.log("data",data)
     console.log("data rows",data.rows[0])
+    return data
 }
 //    <img src="${airport..thumnail.high.url}" alt="${airport.snippet.description}" class="w-full">
 (async ()=>{
     try {
         const airports=await fetchData(API)
-/*         console.log("aeropuertos",airports.rows)
+         console.log("aeropuertos",airports.rows)
         let view=`
         ${airports.rows.map(data=>`
             <div class="group relative">
@@ -37,10 +38,10 @@ async function  fetchData(urlAPi){
             </div>
         `).slice(0,5).join("")}
         `
-        content.innerHTML=view */
+        content.innerHTML=view 
        // let iteration=airports.rows.map((airport)=>airport.name)
         //console.log(iteration)
-        console.log("aerpouertos",airports)
+
     } catch (error) {
         console.log(error)
     }
