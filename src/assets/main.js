@@ -30,17 +30,20 @@ async function  fetchData(urlAPi){
             
                 </div>
                 <div class="mt-4 flex justify-between">
-                <h3 class="text-sm text-gray-700">
+                <h3 class="text-sm text-black-700">
                     <span aria-hidden="true" class="absolute inset-0"></span>
-                    ${data.name}
+                    ${data.name} 
+                    ---
+                    ${data.country}
                 </h3>
                 </div>
             </div>
-        `).slice(0,5).join("")}
+        `).slice(0,10).join("")}
         `
         content.innerHTML=view 
-       // let iteration=airports.rows.map((airport)=>airport.name)
-        //console.log(iteration)
+        
+       // let iteration=airports.rows.map((airport)=>airport.name).slice(1,10).join("")
+        //console.log("iteration",iteration)
 
     } catch (error) {
         console.log(error)
